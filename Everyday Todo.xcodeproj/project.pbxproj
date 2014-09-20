@@ -21,6 +21,9 @@
 		002F932019CD82B90070508D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002F930219CD82B90070508D /* UIKit.framework */; };
 		002F932819CD82B90070508D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 002F932619CD82B90070508D /* InfoPlist.strings */; };
 		002F932A19CD82B90070508D /* Everyday_TodoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 002F932919CD82B90070508D /* Everyday_TodoTests.m */; };
+		002F933519CD86E20070508D /* GLAddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002F933419CD86E20070508D /* GLAddTaskViewController.m */; };
+		002F933819CD87000070508D /* GLDetailTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002F933719CD87000070508D /* GLDetailTaskViewController.m */; };
+		002F933B19CD870E0070508D /* GLEditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002F933A19CD870E0070508D /* GLEditTaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		002F932519CD82B90070508D /* Everyday TodoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Everyday TodoTests-Info.plist"; sourceTree = "<group>"; };
 		002F932719CD82B90070508D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		002F932919CD82B90070508D /* Everyday_TodoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Everyday_TodoTests.m; sourceTree = "<group>"; };
+		002F933319CD86E20070508D /* GLAddTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLAddTaskViewController.h; sourceTree = "<group>"; };
+		002F933419CD86E20070508D /* GLAddTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLAddTaskViewController.m; sourceTree = "<group>"; };
+		002F933619CD87000070508D /* GLDetailTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLDetailTaskViewController.h; sourceTree = "<group>"; };
+		002F933719CD87000070508D /* GLDetailTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLDetailTaskViewController.m; sourceTree = "<group>"; };
+		002F933919CD870E0070508D /* GLEditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLEditTaskViewController.h; sourceTree = "<group>"; };
+		002F933A19CD870E0070508D /* GLEditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLEditTaskViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +126,12 @@
 				002F931019CD82B90070508D /* Main.storyboard */,
 				002F931319CD82B90070508D /* GLViewController.h */,
 				002F931419CD82B90070508D /* GLViewController.m */,
+				002F933319CD86E20070508D /* GLAddTaskViewController.h */,
+				002F933419CD86E20070508D /* GLAddTaskViewController.m */,
+				002F933619CD87000070508D /* GLDetailTaskViewController.h */,
+				002F933719CD87000070508D /* GLDetailTaskViewController.m */,
+				002F933919CD870E0070508D /* GLEditTaskViewController.h */,
+				002F933A19CD870E0070508D /* GLEditTaskViewController.m */,
 				002F931619CD82B90070508D /* Images.xcassets */,
 				002F930519CD82B90070508D /* Supporting Files */,
 			);
@@ -252,6 +267,9 @@
 			files = (
 				002F930B19CD82B90070508D /* main.m in Sources */,
 				002F931519CD82B90070508D /* GLViewController.m in Sources */,
+				002F933B19CD870E0070508D /* GLEditTaskViewController.m in Sources */,
+				002F933519CD86E20070508D /* GLAddTaskViewController.m in Sources */,
+				002F933819CD87000070508D /* GLDetailTaskViewController.m in Sources */,
 				002F930F19CD82B90070508D /* GLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GLViewController : UIViewController
+@interface GLViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+
+- (IBAction)addBarButtonPressed:(UIBarButtonItem *)sender;
+- (IBAction)editBarButtonPressed:(UIBarButtonItem *)sender;
+
 
 @end
