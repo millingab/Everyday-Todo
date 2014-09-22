@@ -27,12 +27,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.editTaskTitleTextField.text = self.task.title;
+    self.editTaskDescriptionTextView.text = self.task.description;
+    self.editDatePickerValue.date = self.task.date;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    self.editTaskDescriptionTextView.delegate = self;
+    self.editTaskTitleTextField.delegate = self;
 }
 
 /*
@@ -46,6 +51,37 @@
 }
 */
 
-- (IBAction)saveBarButtonPressed:(UIBarButtonItem *)sender {
+- (IBAction)saveBarButtonPressed:(UIBarButtonItem *)sender
+{
+    [self updateTask];
+    [self.delegate didUpdateTask];
 }
+
+-(void)updateTask
+{
+    self.task.title = self.editTaskTitleTextField.text;
+    self.task.description = self.editTaskDescriptionTextView.text;
+    self.task.date = self.editDatePickerValue.date;
+}
+
+
+#pragma mark - Delegate methods
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.editTaskTitleTextField resignFirstResponder];
+    return YES;
+}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]) {
+        [self.editTaskDescriptionTextView resignFirstResponder];
+        return NO;
+    }
+    return YES;
+    
+}
+
+
 @end

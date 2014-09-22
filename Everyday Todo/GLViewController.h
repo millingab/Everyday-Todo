@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "GLAddTaskViewController.h"
+#import "GLDetailTaskViewController.h"
 
-@interface GLViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,GLAddTaskViewControllerDelegate>
+@interface GLViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,GLAddTaskViewControllerDelegate,GLDetailTaskViewControllerDelegate>
 
 @property (strong, nonatomic) NSMutableArray *taskObjects;
 

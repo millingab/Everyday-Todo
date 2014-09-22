@@ -10,22 +10,26 @@
 	<string>Everyday Todo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>AFE24ECDB25931B95C1C6AE5D0FCC99BE14F3B95</key>
+		<string>https://github.com/millingab/Everyday-Todo.git</string>
 		<key>D9E3F106-7786-47A9-A6AF-27B0E4B55C56</key>
 		<string>https://github.com/millingab/Everyday-Todo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Everyday Todo.xcodeproj/project.xcworkspace</string>
+	<string>Everyday Todo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D9E3F106-7786-47A9-A6AF-27B0E4B55C56</key>
+		<key>AFE24ECDB25931B95C1C6AE5D0FCC99BE14F3B95</key>
 		<string>../..</string>
+		<key>D9E3F106-7786-47A9-A6AF-27B0E4B55C56</key>
+		<string>../../../Everyday Todo</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/millingab/Everyday-Todo.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D9E3F106-7786-47A9-A6AF-27B0E4B55C56</string>
+	<string>AFE24ECDB25931B95C1C6AE5D0FCC99BE14F3B95</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>D9E3F106-7786-47A9-A6AF-27B0E4B55C56</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Everyday Todo</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AFE24ECDB25931B95C1C6AE5D0FCC99BE14F3B95</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Everyday%20Todo</string>
 		</dict>
 	</array>
 </dict>

@@ -7,8 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GLTaskModel.h"
 
-@interface GLEditTaskViewController : UIViewController
+@protocol GLEditTaskViewControllerDelegate <NSObject>
+
+-(void)didUpdateTask;
+
+@end
+
+@interface GLEditTaskViewController : UIViewController <UITextViewDelegate, UITextFieldDelegate>
+
+@property (strong, nonatomic) GLTaskModel *task;
+@property (weak, nonatomic) id <GLEditTaskViewControllerDelegate> delegate;
+
 @property (strong, nonatomic) IBOutlet UITextField *editTaskTitleTextField;
 @property (strong, nonatomic) IBOutlet UITextView *editTaskDescriptionTextView;
 @property (strong, nonatomic) IBOutlet UIDatePicker *editDatePickerValue;

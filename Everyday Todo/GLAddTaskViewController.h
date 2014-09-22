@@ -16,7 +16,7 @@
 
 @end
 
-@interface GLAddTaskViewController : UIViewController
+@interface GLAddTaskViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) id <GLAddTaskViewControllerDelegate> delegate;
 

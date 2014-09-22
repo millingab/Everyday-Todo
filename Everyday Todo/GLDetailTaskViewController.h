@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "GLTaskModel.h"
+#import "GLEditTaskViewController.h"
 
-@interface GLDetailTaskViewController : UIViewController
+@protocol GLDetailTaskViewControllerDelegate <NSObject>
+
+-(void)updateTask;
+
+@end
+
+@interface GLDetailTaskViewController : UIViewController <GLEditTaskViewControllerDelegate>
 
 @property (strong, nonatomic) GLTaskModel *task;
+@property (weak, nonatomic) id <GLDetailTaskViewControllerDelegate> delegate;
 
 @property (strong, nonatomic) IBOutlet UILabel *taskTitleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *taskDescriptionLabel;

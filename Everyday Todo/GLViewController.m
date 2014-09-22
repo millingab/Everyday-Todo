@@ -7,7 +7,6 @@
 //
 
 #import "GLViewController.h"
-#import "GLDetailTaskViewController.h"
 
 @interface GLViewController ()
 
@@ -56,10 +55,10 @@
         if ([segue.destinationViewController isKindOfClass:[GLDetailTaskViewController class]])
         {
             GLDetailTaskViewController *nextViewController = segue.destinationViewController;
-            
             NSIndexPath *path = sender;
             
             nextViewController.task = self.taskObjects[path.row];
+            nextViewController.delegate = self;
             
         }
     }
@@ -238,6 +237,16 @@
     
     [self.tableView reloadData];
 }
+
+
+#pragma mark - GLAddDetailViewControllerDelegate methods
+
+-(void)updateTask
+{
+    [self saveTasks];
+    [self.tableView reloadData];
+}
+
 
 #pragma mark - IB Actions
 

@@ -8,6 +8,7 @@
 
 #import "GLDetailTaskViewController.h"
 
+
 @interface GLDetailTaskViewController ()
 
 @end
@@ -55,6 +56,44 @@
 }
 */
 
-- (IBAction)editBarButtonPressed:(UIBarButtonItem *)sender {
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[GLEditTaskViewController class]])
+    {
+        GLEditTaskViewController *nextViewController = segue.destinationViewController;
+        nextViewController.task = self.task;
+        nextViewController.delegate = self;
+    }
 }
+
+- (IBAction)editBarButtonPressed:(UIBarButtonItem *)sender
+{
+    [self performSegueWithIdentifier:@"toEditTask" sender:nil];
+}
+
+#pragma mark - GLEditViewControllerDelegate methods
+
+-(void)didUpdateTask
+{
+    self.taskTitleLabel.text = self.task.title;
+    self.taskDescriptionLabel.text = self.task.description;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy - MM - dd"];
+    NSString *stringFromDate = [formatter stringFromDate:self.task.date];
+    
+    self.taskDateLabel.text = stringFromDate;
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    [self.delegate updateTask];
+    
+}
+
 @end
+
+
+
+
+
+
