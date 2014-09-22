@@ -46,9 +46,28 @@
 }
 */
 
-- (IBAction)addTaskButtonPressed:(UIButton *)sender {
+#pragma mark - Helper Methods
+
+-(GLTaskModel *)returnTaskObject {
+    GLTaskModel *taskObject = [[GLTaskModel alloc] init];
+    taskObject.title = self.taskTitleTextField.text;
+    taskObject.description = self.taskDescriptionTextView.text;
+    taskObject.date = self.datePickerValue.date;
+    taskObject.completion = NO;
+    return taskObject;
 }
 
-- (IBAction)cancelButtonPressed:(UIButton *)sender {
+#pragma mark - IB Actions
+
+- (IBAction)addTaskButtonPressed:(UIButton *)sender
+{
+    [self.delegate didAddTask:[self returnTaskObject]];
 }
+
+- (IBAction)cancelButtonPressed:(UIButton *)sender
+{
+    [self.delegate didCancel];
+}
+
+
 @end

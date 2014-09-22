@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GLAddTaskViewController.h"
 
-@interface GLViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+@interface GLViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,GLAddTaskViewControllerDelegate>
+
+@property (strong, nonatomic) NSMutableArray *taskObjects;
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 - (IBAction)addBarButtonPressed:(UIBarButtonItem *)sender;
 - (IBAction)editBarButtonPressed:(UIBarButtonItem *)sender;
-
 
 @end

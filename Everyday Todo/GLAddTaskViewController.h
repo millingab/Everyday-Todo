@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GLTaskModel.h"
+
+@protocol GLAddTaskViewControllerDelegate <NSObject>
+
+-(void)didCancel;
+-(void)didAddTask:(GLTaskModel*) task;
+
+@end
 
 @interface GLAddTaskViewController : UIViewController
+
+@property (weak, nonatomic) id <GLAddTaskViewControllerDelegate> delegate;
 
 @property (strong, nonatomic) IBOutlet UITextField *taskTitleTextField;
 @property (strong, nonatomic) IBOutlet UITextView *taskDescriptionTextView;

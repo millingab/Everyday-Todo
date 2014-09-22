@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0022DFBB19CDCAA800DF7885 /* GLTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0022DFBA19CDCAA800DF7885 /* GLTaskModel.m */; };
 		002F92FF19CD82B90070508D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002F92FE19CD82B90070508D /* Foundation.framework */; };
 		002F930119CD82B90070508D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002F930019CD82B90070508D /* CoreGraphics.framework */; };
 		002F930319CD82B90070508D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002F930219CD82B90070508D /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0022DFB919CDCAA800DF7885 /* GLTaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTaskModel.h; sourceTree = "<group>"; };
+		0022DFBA19CDCAA800DF7885 /* GLTaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTaskModel.m; sourceTree = "<group>"; };
 		002F92FB19CD82B90070508D /* Everyday Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Everyday Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		002F92FE19CD82B90070508D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		002F930019CD82B90070508D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -132,6 +135,8 @@
 				002F933719CD87000070508D /* GLDetailTaskViewController.m */,
 				002F933919CD870E0070508D /* GLEditTaskViewController.h */,
 				002F933A19CD870E0070508D /* GLEditTaskViewController.m */,
+				0022DFB919CDCAA800DF7885 /* GLTaskModel.h */,
+				0022DFBA19CDCAA800DF7885 /* GLTaskModel.m */,
 				002F931619CD82B90070508D /* Images.xcassets */,
 				002F930519CD82B90070508D /* Supporting Files */,
 			);
@@ -268,6 +273,7 @@
 				002F930B19CD82B90070508D /* main.m in Sources */,
 				002F931519CD82B90070508D /* GLViewController.m in Sources */,
 				002F933B19CD870E0070508D /* GLEditTaskViewController.m in Sources */,
+				0022DFBB19CDCAA800DF7885 /* GLTaskModel.m in Sources */,
 				002F933519CD86E20070508D /* GLAddTaskViewController.m in Sources */,
 				002F933819CD87000070508D /* GLDetailTaskViewController.m in Sources */,
 				002F930F19CD82B90070508D /* GLAppDelegate.m in Sources */,
@@ -475,6 +481,7 @@
 				002F932F19CD82B90070508D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		002F933019CD82B90070508D /* Build configuration list for PBXNativeTarget "Everyday TodoTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +490,7 @@
 				002F933219CD82B90070508D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
