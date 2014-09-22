@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GLTaskModel.h"
 
 @interface GLDetailTaskViewController : UIViewController
+
+@property (strong, nonatomic) GLTaskModel *task;
 
 @property (strong, nonatomic) IBOutlet UILabel *taskTitleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *taskDescriptionLabel;

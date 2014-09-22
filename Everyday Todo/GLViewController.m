@@ -7,6 +7,7 @@
 //
 
 #import "GLViewController.h"
+#import "GLDetailTaskViewController.h"
 
 @interface GLViewController ()
 
@@ -44,9 +45,23 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.destinationViewController isKindOfClass: [GLAddTaskViewController class]] ) {
+    if ([segue.destinationViewController isKindOfClass: [GLAddTaskViewController class]] )
+    {
         GLAddTaskViewController *nextViewController = segue.destinationViewController;
         nextViewController.delegate = self;
+    }
+    
+    else if([sender isKindOfClass:[NSIndexPath class]])
+    {
+        if ([segue.destinationViewController isKindOfClass:[GLDetailTaskViewController class]])
+        {
+            GLDetailTaskViewController *nextViewController = segue.destinationViewController;
+            
+            NSIndexPath *path = sender;
+            
+            nextViewController.task = self.taskObjects[path.row];
+            
+        }
     }
 }
 
@@ -138,6 +153,11 @@
 }
 
 #pragma mark - UITableViewDelegate methods
+
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"toDetailTask" sender:indexPath];
+}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
