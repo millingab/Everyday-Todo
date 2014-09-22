@@ -114,7 +114,16 @@
     [self.tableView reloadData];
 }
     
-
+-(void)saveTasks
+{
+    NSMutableArray *taskObjectsAsPropertyLists = [[NSMutableArray alloc] init];
+    for (GLTaskModel *task in self.taskObjects) {
+        NSDictionary *dictionary = [self taskObjectAsPropertyList:task];
+        [taskObjectsAsPropertyLists addObject: dictionary];
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:taskObjectsAsPropertyLists forKey:ARRAY_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 #pragma mark - UITableViewDataSource methods
 
@@ -190,6 +199,20 @@
     }
 }
 
+-(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    GLTaskModel *task = self.taskObjects[sourceIndexPath.row];
+    [self.taskObjects removeObjectAtIndex: sourceIndexPath.row];
+    [self.taskObjects insertObject:task atIndex: destinationIndexPath.row];
+    
+    [self saveTasks];
+}
+
 #pragma mark - GLAddTaskViewControllerDelegate methods
 
 -(void)didCancel
@@ -220,7 +243,10 @@
 
 - (IBAction)editBarButtonPressed:(UIBarButtonItem *)sender
 {
-    
+    if(self.tableView.editing)
+        self.tableView.editing = NO;
+    else
+        self.tableView.editing = YES;
 }
 
 - (IBAction)addBarButtonPressed:(UIBarButtonItem *)sender
